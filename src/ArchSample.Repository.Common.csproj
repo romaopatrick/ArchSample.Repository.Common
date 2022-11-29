@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Class1.cs" />
+      <Compile Remove="ArchSample.Repository.Common.Tests\**" />
+      <Compile Remove="ArchSample.UnityOfWork\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ArchSample.Repository.Common.Tests\**" />
+      <EmbeddedResource Remove="ArchSample.UnityOfWork\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="ArchSample.Repository.Common.Tests\**" />
+      <None Remove="ArchSample.UnityOfWork\**" />
+    </ItemGroup>
+
+</Project>
