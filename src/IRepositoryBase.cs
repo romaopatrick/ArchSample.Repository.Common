@@ -3,7 +3,7 @@ namespace ArchSample.Repository.Common;
 public interface IRepositoryBase<TEntity> where TEntity : Entity
 {
     Task<IEnumerable<TEntity>> ListAsync(Func<TEntity, bool> predicate, CancellationToken ct = default);
-    IEnumerable<TEntity> List(Func<TEntity, bool> predicate, CancellationToken ct = default);
+    IEnumerable<TEntity> List(Func<TEntity, bool> predicate);
     Task<TEntity> InsertAsync(TEntity entity, CancellationToken ct = default);
     Task<IEnumerable<TEntity>> InsertAsync(IEnumerable<TEntity> entities, CancellationToken ct = default);
     TEntity Insert(TEntity entity);

@@ -9,7 +9,7 @@ public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where T
     {
         throw new NotImplementedException();
     }
-    public virtual IEnumerable<TEntity> List(Func<TEntity, bool> predicate, CancellationToken ct = default)
+    public virtual IEnumerable<TEntity> List(Func<TEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
