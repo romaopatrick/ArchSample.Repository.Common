@@ -1,0 +1,32 @@
+name: "Deploy to nuget"
+
+on: ["push"]
+env: 
+  PROJECT_PATH: 'ArchSample.Repository.Common.csproj'
+  OUTPUT_DIRECTORY: ${{ github.workspace }}\output
+  NUGET_SOURCE_URL: 'https://www.nuget.org'
+
+jobs: 
+  deploy: 
+    name: 'deploy-arch-sample-repository-common'
+    runs-on: 'windows-latest'
+    steps: 
+      - name: 'Checkout'
+        uses: actions/checkout@latest
+        
+      - name: 'Install dotnet'
+        uses: actions/setup-dotnet@latest
+        with: 
+          dotnet-version: '6.0'
+      
+      - name: 'Restore packages'
+        run: dotnet restore ${{ env.PROJECT_PATH }}
+        
+      - name: 'Build project'
+        run: dotnet build ${{ env.PROJECT_PATH }} --no-restore --configuration Release
+        
+      - name: 'Pack project'
+        run: dotnet pack ${{ env.PROJECT_PATH }} --no-restore --no-build --configuration Release --include-symbols --output ${{ OUTPUT_DIRECTORY }}
+        
+      - name: 'Push package'
+        run: dotnet nuget push ${{ OUTPUT_DIRECTORY }}\*.nupkg -k ${{ secrets.NUGET_AUTH_TOKEN }} -s ${{  NUGET_SOURCE_URL }}
