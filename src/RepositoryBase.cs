@@ -45,7 +45,7 @@ public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where T
     {
         throw new NotImplementedException();
     }
-    public virtual Task UpdateAsync(IEnumerable<TEntity> entity, CancellationToken ct = default)
+    public virtual Task UpdateAsync(IEnumerable<TEntity> entities, CancellationToken ct = default)
     {
         throw new NotImplementedException();
     }
@@ -53,7 +53,7 @@ public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where T
     {
         throw new NotImplementedException();
     }
-    public virtual void Update(IEnumerable<TEntity> entity)
+    public virtual void Update(IEnumerable<TEntity> entities)
     {
         throw new NotImplementedException();
     }

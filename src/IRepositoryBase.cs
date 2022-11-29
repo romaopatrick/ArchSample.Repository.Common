@@ -11,9 +11,9 @@ public interface IRepositoryBase<TEntity> where TEntity : Entity
     void Insert(TEntity entity);
     void Insert(IEnumerable<TEntity> entities);
     Task UpdateAsync(TEntity entity, CancellationToken ct = default);
-    Task UpdateAsync(IEnumerable<TEntity> entity, CancellationToken ct = default);
+    Task UpdateAsync(IEnumerable<TEntity> entities, CancellationToken ct = default);
     void Update(TEntity entity);
-    void Update(IEnumerable<TEntity> entity);
+    void Update(IEnumerable<TEntity> entities);
     Task ArchiveAsync(Func<TEntity, bool> predicate, CancellationToken ct = default);
     void Archive(Func<TEntity, bool> predicate);
 }
