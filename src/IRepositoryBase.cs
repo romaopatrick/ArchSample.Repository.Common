@@ -2,8 +2,8 @@ namespace ArchSample.Repository.Common;
 
 public interface IRepositoryBase<TEntity> where TEntity : Entity
 {
-    Task<TEntity> FirstAsync(Guid id);
-    TEntity First(Guid id);
+    Task<TEntity> FirstAsync(Func<TEntity, bool> predicate, CancellationToken ct = default);
+    TEntity First(Func<TEntity, bool> predicate);
     Task<IEnumerable<TEntity>> ListAsync(Func<TEntity, bool> predicate, CancellationToken ct = default);
     IEnumerable<TEntity> List(Func<TEntity, bool> predicate);
     Task InsertAsync(TEntity entity, CancellationToken ct = default);

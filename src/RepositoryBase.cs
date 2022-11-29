@@ -5,12 +5,12 @@ namespace ArchSample.Repository.Common;
 
 public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : Entity
 {
-    public async Task<TEntity> FirstAsync(Guid id)
+    public async Task<TEntity> FirstAsync(Func<TEntity, bool> predicate, CancellationToken ct)
     {
         throw new NotImplementedException();
     }
 
-    public TEntity First(Guid id)
+    public TEntity First(Func<TEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
