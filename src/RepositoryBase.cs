@@ -24,36 +24,36 @@ public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where T
         throw new NotImplementedException();
     }
     
-    public virtual Task<TEntity> InsertAsync(TEntity entity, CancellationToken ct = default)
+    public virtual Task InsertAsync(TEntity entity, CancellationToken ct = default)
     {
         throw new NotImplementedException();
     }
-    public virtual Task<IEnumerable<TEntity>> InsertAsync(IEnumerable<TEntity> entities, CancellationToken ct = default)
+    public virtual Task InsertAsync(IEnumerable<TEntity> entities, CancellationToken ct = default)
     {
         throw new NotImplementedException();
     }
-    public virtual TEntity Insert(TEntity entity)
+    public virtual void Insert(TEntity entity)
     {
         throw new NotImplementedException();
     }
-    public virtual IEnumerable<TEntity> Insert(IEnumerable<TEntity> entities)
+    public virtual void Insert(IEnumerable<TEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public virtual Task<TEntity> UpdateAsync(TEntity entity, CancellationToken ct = default)
+    public virtual Task UpdateAsync(TEntity entity, CancellationToken ct = default)
     {
         throw new NotImplementedException();
     }
-    public virtual Task<IEnumerable<TEntity>> UpdateAsync(IEnumerable<TEntity> entity, CancellationToken ct = default)
+    public virtual Task UpdateAsync(IEnumerable<TEntity> entity, CancellationToken ct = default)
     {
         throw new NotImplementedException();
     }
-    public virtual TEntity Update(TEntity entity)
+    public virtual void Update(TEntity entity)
     {
         throw new NotImplementedException();
     }
-    public virtual IEnumerable<TEntity> Update(IEnumerable<TEntity> entity)
+    public virtual void Update(IEnumerable<TEntity> entity)
     {
         throw new NotImplementedException();
     }

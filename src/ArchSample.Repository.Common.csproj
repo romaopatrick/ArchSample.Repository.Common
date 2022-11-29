@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>PRH.ArchSample.Repository.Common</PackageId>
-        <Version>1.0.1</Version>
+        <Version>1.0.2</Version>
         <Authors>Patrick R Hernandez</Authors>
         <Company>P R H Tecnologia LTDA.</Company>
         <PackageDescription>This package adds an Octocat!</PackageDescription>
