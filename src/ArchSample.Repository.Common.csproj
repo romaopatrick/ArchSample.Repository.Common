@@ -4,15 +4,11 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <PackageId>ArchSampleRepositoryCommon</PackageId>
+        <PackageId>PRH.ArchSampleRepositoryCommon</PackageId>
         <Version>1.0.0</Version>
         <Authors>Patrick R Hernandez</Authors>
         <Company>P R H Tecnologia LTDA.</Company>
         <PackageDescription>This package adds an Octocat!</PackageDescription>
         <RepositoryUrl>https://github.com/romaopatrick/ArchSample.Repository.Common</RepositoryUrl>
     </PropertyGroup>
-
-    <ItemGroup>
-      <Content Include=".github\nuget.yml" />
-    </ItemGroup>
 </Project>
